@@ -7,14 +7,14 @@ namespace CalcCorrectGraph_Calculation_Tool
     {
         public Form1()
         {
-
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs ee)
         {
 
-
+            Activated += Calculate; //calculate on initial form load
+            
             //calculate output if any value is changed
             InputValButton.ValueChanged += Calculate;
             InputStageMaxVal0.ValueChanged += Calculate;
@@ -32,7 +32,7 @@ namespace CalcCorrectGraph_Calculation_Tool
             inputMultVal2.ValueChanged += Calculate;
             inputMultVal3.ValueChanged += Calculate;
             inputMultVal4.ValueChanged += Calculate;
-
+            
             //highlight entire input if tabbed into
             InputValButton.GotFocus += (o, e) => InputValButton.Select(0, InputValButton.Text.Length);
             InputStageMaxVal0.GotFocus += (o, e) => InputStageMaxVal0.Select(0, InputStageMaxVal0.Text.Length);
@@ -67,7 +67,6 @@ namespace CalcCorrectGraph_Calculation_Tool
             double growthVal;
 
             //calculate differently depending on if mult val is negative or positive
-
             if (multValMin > 0)
                 growthVal = Math.Pow(inputRatio, multValMin);
             else
