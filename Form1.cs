@@ -72,8 +72,10 @@ namespace CalcCorrectGraph_Calculation_Tool
             else
                 growthVal = 1 - Math.Pow(1 - inputRatio, Math.Abs(multValMin));
 
-            output = Math.Floor(valMin + ((valMax - valMin) * growthVal)); //standard output
+            //output = Math.Floor(valMin + ((valMax - valMin) * growthVal)); //standard output (floored for integers like HP)
+            output = valMin + ((valMax - valMin) * growthVal); //standard output (scaling calculations use decimals)
 
+            output = Math.Round(output * 1000) / 1000; //clip off most of the decimals because it's annoying
             //System.Diagnostics.Debug.WriteLine("raw output: " + output);
 
             OutputTextBox.Text = output.ToString(); //print final value
