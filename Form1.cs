@@ -109,8 +109,9 @@ namespace CalcCorrectGraph_Calculation_Tool
                 OutputTextBox.Text = "ERR: !ASCEND";
             }
             else if (inputVal < stageVal0){
-                //error: input is less than stage 0
-                OutputTextBox.Text = "ERR: <STAGE0";
+                //input is less than stage 0
+                //OutputTextBox.Text = "ERR: <STAGE0";
+                OutputTextBox.Text = growVal0.ToString("G"); //clamp at stage 0 value (SEMI-CONFIRMED ENGINE BEHAVIOR. NEEDS THOROUGH VERIFICATION)
             }
             else if (inputVal <= stageVal1){
                 //stage 0-1
@@ -129,8 +130,9 @@ namespace CalcCorrectGraph_Calculation_Tool
                 CalculateOutput(stageVal3, stageVal4, growVal3, growVal4, inputVal, multVal3, multVal4);
             }
             else{
-                //error: input value greater than stage 4
-                OutputTextBox.Text = "ERR: >STAGE4";
+                //input value greater than stage 4
+                //OutputTextBox.Text = "ERR: >STAGE4";
+                OutputTextBox.Text = growVal4.ToString("G"); //clamp at stage 4 value (SEMI-CONFIRMED ENGINE BEHAVIOR. NEEDS THOROUGH VERIFICATION)
             }
         }
 
