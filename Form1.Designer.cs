@@ -32,7 +32,6 @@ namespace CalcCorrectGraph_Calculation_Tool
         {
             this.Label1 = new System.Windows.Forms.Label();
             this.InputStageMaxVal0 = new System.Windows.Forms.NumericUpDown();
-            this.InputValButton = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.InputStageMaxVal1 = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
@@ -65,8 +64,8 @@ namespace CalcCorrectGraph_Calculation_Tool
             this.InputStageMaxVal4 = new System.Windows.Forms.NumericUpDown();
             this.label14 = new System.Windows.Forms.Label();
             this.buttonDebugSet = new System.Windows.Forms.Button();
+            this.InputValButton = new CalcCorrectGraph_Calculation_Tool.HideDecimalNumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.InputStageMaxVal0)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.InputValButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InputStageMaxVal1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InputStageMaxVal2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InputStageMaxVal3)).BeginInit();
@@ -81,6 +80,7 @@ namespace CalcCorrectGraph_Calculation_Tool
             ((System.ComponentModel.ISupportInitialize)(this.inputMultVal4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputGrowVal4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InputStageMaxVal4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InputValButton)).BeginInit();
             this.SuspendLayout();
             // 
             // Label1
@@ -94,34 +94,22 @@ namespace CalcCorrectGraph_Calculation_Tool
             // 
             // InputStageMaxVal0
             // 
+            this.InputStageMaxVal0.DecimalPlaces = 2;
             this.InputStageMaxVal0.Location = new System.Drawing.Point(12, 54);
             this.InputStageMaxVal0.Maximum = new decimal(new int[] {
             99999,
             0,
             0,
             0});
+            this.InputStageMaxVal0.Minimum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            -2147483648});
             this.InputStageMaxVal0.Name = "InputStageMaxVal0";
             this.InputStageMaxVal0.Size = new System.Drawing.Size(73, 20);
             this.InputStageMaxVal0.TabIndex = 0;
             this.InputStageMaxVal0.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // InputValButton
-            // 
-            this.InputValButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.InputValButton.Location = new System.Drawing.Point(12, 322);
-            this.InputValButton.Maximum = new decimal(new int[] {
-            99999,
-            0,
-            0,
-            0});
-            this.InputValButton.Name = "InputValButton";
-            this.InputValButton.Size = new System.Drawing.Size(73, 20);
-            this.InputValButton.TabIndex = 15;
-            this.InputValButton.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -139,12 +127,18 @@ namespace CalcCorrectGraph_Calculation_Tool
             // 
             // InputStageMaxVal1
             // 
+            this.InputStageMaxVal1.DecimalPlaces = 2;
             this.InputStageMaxVal1.Location = new System.Drawing.Point(12, 93);
             this.InputStageMaxVal1.Maximum = new decimal(new int[] {
             99999,
             0,
             0,
             0});
+            this.InputStageMaxVal1.Minimum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            -2147483648});
             this.InputStageMaxVal1.Name = "InputStageMaxVal1";
             this.InputStageMaxVal1.Size = new System.Drawing.Size(73, 20);
             this.InputStageMaxVal1.TabIndex = 1;
@@ -165,12 +159,18 @@ namespace CalcCorrectGraph_Calculation_Tool
             // 
             // InputStageMaxVal2
             // 
+            this.InputStageMaxVal2.DecimalPlaces = 2;
             this.InputStageMaxVal2.Location = new System.Drawing.Point(12, 132);
             this.InputStageMaxVal2.Maximum = new decimal(new int[] {
             99999,
             0,
             0,
             0});
+            this.InputStageMaxVal2.Minimum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            -2147483648});
             this.InputStageMaxVal2.Name = "InputStageMaxVal2";
             this.InputStageMaxVal2.Size = new System.Drawing.Size(73, 20);
             this.InputStageMaxVal2.TabIndex = 2;
@@ -191,12 +191,18 @@ namespace CalcCorrectGraph_Calculation_Tool
             // 
             // InputStageMaxVal3
             // 
+            this.InputStageMaxVal3.DecimalPlaces = 2;
             this.InputStageMaxVal3.Location = new System.Drawing.Point(12, 171);
             this.InputStageMaxVal3.Maximum = new decimal(new int[] {
             99999,
             0,
             0,
             0});
+            this.InputStageMaxVal3.Minimum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            -2147483648});
             this.InputStageMaxVal3.Name = "InputStageMaxVal3";
             this.InputStageMaxVal3.Size = new System.Drawing.Size(73, 20);
             this.InputStageMaxVal3.TabIndex = 3;
@@ -218,12 +224,18 @@ namespace CalcCorrectGraph_Calculation_Tool
             // inputGrowVal3
             // 
             this.inputGrowVal3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.inputGrowVal3.DecimalPlaces = 2;
             this.inputGrowVal3.Location = new System.Drawing.Point(111, 171);
             this.inputGrowVal3.Maximum = new decimal(new int[] {
             99999,
             0,
             0,
             0});
+            this.inputGrowVal3.Minimum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            -2147483648});
             this.inputGrowVal3.Name = "inputGrowVal3";
             this.inputGrowVal3.Size = new System.Drawing.Size(96, 20);
             this.inputGrowVal3.TabIndex = 8;
@@ -246,12 +258,18 @@ namespace CalcCorrectGraph_Calculation_Tool
             // inputGrowVal2
             // 
             this.inputGrowVal2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.inputGrowVal2.DecimalPlaces = 2;
             this.inputGrowVal2.Location = new System.Drawing.Point(111, 132);
             this.inputGrowVal2.Maximum = new decimal(new int[] {
             99999,
             0,
             0,
             0});
+            this.inputGrowVal2.Minimum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            -2147483648});
             this.inputGrowVal2.Name = "inputGrowVal2";
             this.inputGrowVal2.Size = new System.Drawing.Size(96, 20);
             this.inputGrowVal2.TabIndex = 7;
@@ -274,12 +292,18 @@ namespace CalcCorrectGraph_Calculation_Tool
             // inputGrowVal1
             // 
             this.inputGrowVal1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.inputGrowVal1.DecimalPlaces = 2;
             this.inputGrowVal1.Location = new System.Drawing.Point(111, 93);
             this.inputGrowVal1.Maximum = new decimal(new int[] {
             99999,
             0,
             0,
             0});
+            this.inputGrowVal1.Minimum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            -2147483648});
             this.inputGrowVal1.Name = "inputGrowVal1";
             this.inputGrowVal1.Size = new System.Drawing.Size(96, 20);
             this.inputGrowVal1.TabIndex = 6;
@@ -302,12 +326,18 @@ namespace CalcCorrectGraph_Calculation_Tool
             // inputGrowVal0
             // 
             this.inputGrowVal0.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.inputGrowVal0.DecimalPlaces = 2;
             this.inputGrowVal0.Location = new System.Drawing.Point(111, 54);
             this.inputGrowVal0.Maximum = new decimal(new int[] {
             99999,
             0,
             0,
             0});
+            this.inputGrowVal0.Minimum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            -2147483648});
             this.inputGrowVal0.Name = "inputGrowVal0";
             this.inputGrowVal0.Size = new System.Drawing.Size(96, 20);
             this.inputGrowVal0.TabIndex = 5;
@@ -338,12 +368,12 @@ namespace CalcCorrectGraph_Calculation_Tool
             131072});
             this.inputMultVal3.Location = new System.Drawing.Point(226, 171);
             this.inputMultVal3.Maximum = new decimal(new int[] {
-            999,
+            99999,
             0,
             0,
             0});
             this.inputMultVal3.Minimum = new decimal(new int[] {
-            999,
+            99999,
             0,
             0,
             -2147483648});
@@ -377,12 +407,12 @@ namespace CalcCorrectGraph_Calculation_Tool
             131072});
             this.inputMultVal2.Location = new System.Drawing.Point(226, 132);
             this.inputMultVal2.Maximum = new decimal(new int[] {
-            999,
+            99999,
             0,
             0,
             0});
             this.inputMultVal2.Minimum = new decimal(new int[] {
-            999,
+            99999,
             0,
             0,
             -2147483648});
@@ -416,12 +446,12 @@ namespace CalcCorrectGraph_Calculation_Tool
             131072});
             this.inputMultVal1.Location = new System.Drawing.Point(226, 93);
             this.inputMultVal1.Maximum = new decimal(new int[] {
-            999,
+            99999,
             0,
             0,
             0});
             this.inputMultVal1.Minimum = new decimal(new int[] {
-            999,
+            99999,
             0,
             0,
             -2147483648});
@@ -455,12 +485,12 @@ namespace CalcCorrectGraph_Calculation_Tool
             131072});
             this.inputMultVal0.Location = new System.Drawing.Point(226, 54);
             this.inputMultVal0.Maximum = new decimal(new int[] {
-            999,
+            99999,
             0,
             0,
             0});
             this.inputMultVal0.Minimum = new decimal(new int[] {
-            999,
+            99999,
             0,
             0,
             -2147483648});
@@ -517,12 +547,12 @@ namespace CalcCorrectGraph_Calculation_Tool
             131072});
             this.inputMultVal4.Location = new System.Drawing.Point(226, 210);
             this.inputMultVal4.Maximum = new decimal(new int[] {
-            999,
+            99999,
             0,
             0,
             0});
             this.inputMultVal4.Minimum = new decimal(new int[] {
-            999,
+            99999,
             0,
             0,
             -2147483648});
@@ -548,12 +578,18 @@ namespace CalcCorrectGraph_Calculation_Tool
             // inputGrowVal4
             // 
             this.inputGrowVal4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.inputGrowVal4.DecimalPlaces = 2;
             this.inputGrowVal4.Location = new System.Drawing.Point(111, 210);
             this.inputGrowVal4.Maximum = new decimal(new int[] {
             99999,
             0,
             0,
             0});
+            this.inputGrowVal4.Minimum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            -2147483648});
             this.inputGrowVal4.Name = "inputGrowVal4";
             this.inputGrowVal4.Size = new System.Drawing.Size(96, 20);
             this.inputGrowVal4.TabIndex = 9;
@@ -575,12 +611,18 @@ namespace CalcCorrectGraph_Calculation_Tool
             // 
             // InputStageMaxVal4
             // 
+            this.InputStageMaxVal4.DecimalPlaces = 2;
             this.InputStageMaxVal4.Location = new System.Drawing.Point(12, 210);
             this.InputStageMaxVal4.Maximum = new decimal(new int[] {
             99999,
             0,
             0,
             0});
+            this.InputStageMaxVal4.Minimum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            -2147483648});
             this.InputStageMaxVal4.Name = "InputStageMaxVal4";
             this.InputStageMaxVal4.Size = new System.Drawing.Size(73, 20);
             this.InputStageMaxVal4.TabIndex = 4;
@@ -610,11 +652,36 @@ namespace CalcCorrectGraph_Calculation_Tool
             this.buttonDebugSet.Visible = false;
             this.buttonDebugSet.Click += new System.EventHandler(this.ButtonDebugSet_Click);
             // 
+            // InputValButton
+            // 
+            this.InputValButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.InputValButton.DecimalPlaces = 3;
+            this.InputValButton.Location = new System.Drawing.Point(12, 322);
+            this.InputValButton.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.InputValButton.Minimum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            -2147483648});
+            this.InputValButton.Name = "InputValButton";
+            this.InputValButton.Size = new System.Drawing.Size(94, 20);
+            this.InputValButton.TabIndex = 42;
+            this.InputValButton.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(330, 354);
+            this.Controls.Add(this.InputValButton);
             this.Controls.Add(this.buttonDebugSet);
             this.Controls.Add(this.inputMultVal4);
             this.Controls.Add(this.label8);
@@ -647,7 +714,6 @@ namespace CalcCorrectGraph_Calculation_Tool
             this.Controls.Add(this.InputStageMaxVal1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.InputValButton);
             this.Controls.Add(this.InputStageMaxVal0);
             this.Controls.Add(this.Label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -655,7 +721,6 @@ namespace CalcCorrectGraph_Calculation_Tool
             this.Text = "CalcCorrectGraph Calculator";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.InputStageMaxVal0)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.InputValButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InputStageMaxVal1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InputStageMaxVal2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InputStageMaxVal3)).EndInit();
@@ -670,6 +735,7 @@ namespace CalcCorrectGraph_Calculation_Tool
             ((System.ComponentModel.ISupportInitialize)(this.inputMultVal4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputGrowVal4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InputStageMaxVal4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InputValButton)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -679,7 +745,6 @@ namespace CalcCorrectGraph_Calculation_Tool
         #endregion
         private System.Windows.Forms.Label Label1;
         private System.Windows.Forms.NumericUpDown InputStageMaxVal0;
-        private System.Windows.Forms.NumericUpDown InputValButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown InputStageMaxVal1;
         private System.Windows.Forms.Label label3;
@@ -712,6 +777,7 @@ namespace CalcCorrectGraph_Calculation_Tool
         private System.Windows.Forms.NumericUpDown InputStageMaxVal4;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button buttonDebugSet;
+        private HideDecimalNumericUpDown InputValButton;
     }
 }
 

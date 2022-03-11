@@ -3,8 +3,10 @@ using System.Windows.Forms;
 
 namespace CalcCorrectGraph_Calculation_Tool
 {
+
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
@@ -78,7 +80,7 @@ namespace CalcCorrectGraph_Calculation_Tool
             output = Math.Round(output * 1000) / 1000; //clip off most of the decimals because it's annoying
             //System.Diagnostics.Debug.WriteLine("raw output: " + output);
 
-            OutputTextBox.Text = output.ToString(); //print final value
+            OutputTextBox.Text = output.ToString("G"); //print final value (G = remove empty decimals)
             return;
         }
 
@@ -153,5 +155,13 @@ namespace CalcCorrectGraph_Calculation_Tool
             InputValButton.Value = 30M;
         }
 
+    }
+
+    public class HideDecimalNumericUpDown : NumericUpDown
+    {
+        protected override void UpdateEditText()
+        {
+            Text = Value.ToString("G"); //hide unused decimals
+        }
     }
 }
