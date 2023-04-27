@@ -64,7 +64,6 @@ namespace CalcCorrectGraph_Calculation_Tool
             this.InputStageMaxVal4 = new System.Windows.Forms.NumericUpDown();
             this.label14 = new System.Windows.Forms.Label();
             this.buttonDebugSet = new System.Windows.Forms.Button();
-            this.InputValButton = new CalcCorrectGraph_Calculation_Tool.HideDecimalNumericUpDown();
             this.initCost = new System.Windows.Forms.NumericUpDown();
             this.initOffset = new System.Windows.Forms.NumericUpDown();
             this.increaseInterval = new System.Windows.Forms.NumericUpDown();
@@ -75,6 +74,10 @@ namespace CalcCorrectGraph_Calculation_Tool
             this.label17 = new System.Windows.Forms.Label();
             this.levelCostTextbox = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.InputValButton = new CalcCorrectGraph_Calculation_Tool.HideDecimalNumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.InputStageMaxVal0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InputStageMaxVal1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InputStageMaxVal2)).BeginInit();
@@ -90,17 +93,20 @@ namespace CalcCorrectGraph_Calculation_Tool
             ((System.ComponentModel.ISupportInitialize)(this.inputMultVal4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputGrowVal4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InputStageMaxVal4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.InputValButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.initCost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.initOffset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.increaseInterval)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.costIncrease)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.InputValButton)).BeginInit();
             this.SuspendLayout();
             // 
             // Label1
             // 
             this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(9, 38);
+            this.Label1.Location = new System.Drawing.Point(9, 8);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(76, 13);
             this.Label1.TabIndex = 5;
@@ -109,7 +115,7 @@ namespace CalcCorrectGraph_Calculation_Tool
             // InputStageMaxVal0
             // 
             this.InputStageMaxVal0.DecimalPlaces = 3;
-            this.InputStageMaxVal0.Location = new System.Drawing.Point(12, 54);
+            this.InputStageMaxVal0.Location = new System.Drawing.Point(12, 24);
             this.InputStageMaxVal0.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -131,9 +137,8 @@ namespace CalcCorrectGraph_Calculation_Tool
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 437);
+            this.label2.Location = new System.Drawing.Point(9, 307);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 8;
@@ -142,7 +147,7 @@ namespace CalcCorrectGraph_Calculation_Tool
             // InputStageMaxVal1
             // 
             this.InputStageMaxVal1.DecimalPlaces = 3;
-            this.InputStageMaxVal1.Location = new System.Drawing.Point(12, 93);
+            this.InputStageMaxVal1.Location = new System.Drawing.Point(12, 63);
             this.InputStageMaxVal1.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -165,7 +170,7 @@ namespace CalcCorrectGraph_Calculation_Tool
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 77);
+            this.label3.Location = new System.Drawing.Point(9, 47);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 13);
             this.label3.TabIndex = 9;
@@ -174,7 +179,7 @@ namespace CalcCorrectGraph_Calculation_Tool
             // InputStageMaxVal2
             // 
             this.InputStageMaxVal2.DecimalPlaces = 3;
-            this.InputStageMaxVal2.Location = new System.Drawing.Point(12, 132);
+            this.InputStageMaxVal2.Location = new System.Drawing.Point(12, 102);
             this.InputStageMaxVal2.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -197,7 +202,7 @@ namespace CalcCorrectGraph_Calculation_Tool
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 116);
+            this.label4.Location = new System.Drawing.Point(9, 86);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 13);
             this.label4.TabIndex = 11;
@@ -206,7 +211,7 @@ namespace CalcCorrectGraph_Calculation_Tool
             // InputStageMaxVal3
             // 
             this.InputStageMaxVal3.DecimalPlaces = 3;
-            this.InputStageMaxVal3.Location = new System.Drawing.Point(12, 171);
+            this.InputStageMaxVal3.Location = new System.Drawing.Point(12, 141);
             this.InputStageMaxVal3.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -229,7 +234,7 @@ namespace CalcCorrectGraph_Calculation_Tool
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 155);
+            this.label5.Location = new System.Drawing.Point(9, 125);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 13);
             this.label5.TabIndex = 13;
@@ -237,9 +242,8 @@ namespace CalcCorrectGraph_Calculation_Tool
             // 
             // inputGrowVal3
             // 
-            this.inputGrowVal3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.inputGrowVal3.DecimalPlaces = 3;
-            this.inputGrowVal3.Location = new System.Drawing.Point(111, 171);
+            this.inputGrowVal3.Location = new System.Drawing.Point(109, 141);
             this.inputGrowVal3.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -261,9 +265,8 @@ namespace CalcCorrectGraph_Calculation_Tool
             // 
             // StageMaxGrowVal3
             // 
-            this.StageMaxGrowVal3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.StageMaxGrowVal3.AutoSize = true;
-            this.StageMaxGrowVal3.Location = new System.Drawing.Point(108, 155);
+            this.StageMaxGrowVal3.Location = new System.Drawing.Point(106, 125);
             this.StageMaxGrowVal3.Name = "StageMaxGrowVal3";
             this.StageMaxGrowVal3.Size = new System.Drawing.Size(101, 13);
             this.StageMaxGrowVal3.TabIndex = 21;
@@ -271,9 +274,8 @@ namespace CalcCorrectGraph_Calculation_Tool
             // 
             // inputGrowVal2
             // 
-            this.inputGrowVal2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.inputGrowVal2.DecimalPlaces = 3;
-            this.inputGrowVal2.Location = new System.Drawing.Point(111, 132);
+            this.inputGrowVal2.Location = new System.Drawing.Point(109, 102);
             this.inputGrowVal2.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -295,9 +297,8 @@ namespace CalcCorrectGraph_Calculation_Tool
             // 
             // StageMaxGrowVal2
             // 
-            this.StageMaxGrowVal2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.StageMaxGrowVal2.AutoSize = true;
-            this.StageMaxGrowVal2.Location = new System.Drawing.Point(108, 116);
+            this.StageMaxGrowVal2.Location = new System.Drawing.Point(106, 86);
             this.StageMaxGrowVal2.Name = "StageMaxGrowVal2";
             this.StageMaxGrowVal2.Size = new System.Drawing.Size(101, 13);
             this.StageMaxGrowVal2.TabIndex = 19;
@@ -305,9 +306,8 @@ namespace CalcCorrectGraph_Calculation_Tool
             // 
             // inputGrowVal1
             // 
-            this.inputGrowVal1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.inputGrowVal1.DecimalPlaces = 3;
-            this.inputGrowVal1.Location = new System.Drawing.Point(111, 93);
+            this.inputGrowVal1.Location = new System.Drawing.Point(109, 63);
             this.inputGrowVal1.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -329,9 +329,8 @@ namespace CalcCorrectGraph_Calculation_Tool
             // 
             // StageMaxGrowVal1
             // 
-            this.StageMaxGrowVal1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.StageMaxGrowVal1.AutoSize = true;
-            this.StageMaxGrowVal1.Location = new System.Drawing.Point(108, 77);
+            this.StageMaxGrowVal1.Location = new System.Drawing.Point(106, 47);
             this.StageMaxGrowVal1.Name = "StageMaxGrowVal1";
             this.StageMaxGrowVal1.Size = new System.Drawing.Size(101, 13);
             this.StageMaxGrowVal1.TabIndex = 17;
@@ -339,9 +338,8 @@ namespace CalcCorrectGraph_Calculation_Tool
             // 
             // inputGrowVal0
             // 
-            this.inputGrowVal0.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.inputGrowVal0.DecimalPlaces = 3;
-            this.inputGrowVal0.Location = new System.Drawing.Point(111, 54);
+            this.inputGrowVal0.Location = new System.Drawing.Point(109, 24);
             this.inputGrowVal0.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -363,9 +361,8 @@ namespace CalcCorrectGraph_Calculation_Tool
             // 
             // StageMaxGrowVal0
             // 
-            this.StageMaxGrowVal0.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.StageMaxGrowVal0.AutoSize = true;
-            this.StageMaxGrowVal0.Location = new System.Drawing.Point(108, 38);
+            this.StageMaxGrowVal0.Location = new System.Drawing.Point(106, 8);
             this.StageMaxGrowVal0.Name = "StageMaxGrowVal0";
             this.StageMaxGrowVal0.Size = new System.Drawing.Size(101, 13);
             this.StageMaxGrowVal0.TabIndex = 15;
@@ -373,14 +370,13 @@ namespace CalcCorrectGraph_Calculation_Tool
             // 
             // inputMultVal3
             // 
-            this.inputMultVal3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inputMultVal3.DecimalPlaces = 3;
             this.inputMultVal3.Increment = new decimal(new int[] {
             5,
             0,
             0,
             131072});
-            this.inputMultVal3.Location = new System.Drawing.Point(226, 171);
+            this.inputMultVal3.Location = new System.Drawing.Point(222, 141);
             this.inputMultVal3.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -402,9 +398,8 @@ namespace CalcCorrectGraph_Calculation_Tool
             // 
             // label10
             // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(223, 155);
+            this.label10.Location = new System.Drawing.Point(219, 125);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(102, 13);
             this.label10.TabIndex = 29;
@@ -412,14 +407,13 @@ namespace CalcCorrectGraph_Calculation_Tool
             // 
             // inputMultVal2
             // 
-            this.inputMultVal2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inputMultVal2.DecimalPlaces = 3;
             this.inputMultVal2.Increment = new decimal(new int[] {
             5,
             0,
             0,
             131072});
-            this.inputMultVal2.Location = new System.Drawing.Point(226, 132);
+            this.inputMultVal2.Location = new System.Drawing.Point(222, 102);
             this.inputMultVal2.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -441,9 +435,8 @@ namespace CalcCorrectGraph_Calculation_Tool
             // 
             // label11
             // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(223, 116);
+            this.label11.Location = new System.Drawing.Point(219, 86);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(102, 13);
             this.label11.TabIndex = 27;
@@ -451,14 +444,13 @@ namespace CalcCorrectGraph_Calculation_Tool
             // 
             // inputMultVal1
             // 
-            this.inputMultVal1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inputMultVal1.DecimalPlaces = 3;
             this.inputMultVal1.Increment = new decimal(new int[] {
             5,
             0,
             0,
             131072});
-            this.inputMultVal1.Location = new System.Drawing.Point(226, 93);
+            this.inputMultVal1.Location = new System.Drawing.Point(222, 63);
             this.inputMultVal1.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -480,9 +472,8 @@ namespace CalcCorrectGraph_Calculation_Tool
             // 
             // label12
             // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(223, 77);
+            this.label12.Location = new System.Drawing.Point(219, 47);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(102, 13);
             this.label12.TabIndex = 25;
@@ -490,14 +481,13 @@ namespace CalcCorrectGraph_Calculation_Tool
             // 
             // inputMultVal0
             // 
-            this.inputMultVal0.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inputMultVal0.DecimalPlaces = 3;
             this.inputMultVal0.Increment = new decimal(new int[] {
             5,
             0,
             0,
             131072});
-            this.inputMultVal0.Location = new System.Drawing.Point(226, 54);
+            this.inputMultVal0.Location = new System.Drawing.Point(222, 24);
             this.inputMultVal0.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -519,9 +509,8 @@ namespace CalcCorrectGraph_Calculation_Tool
             // 
             // label13
             // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(223, 38);
+            this.label13.Location = new System.Drawing.Point(219, 8);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(102, 13);
             this.label13.TabIndex = 23;
@@ -529,9 +518,8 @@ namespace CalcCorrectGraph_Calculation_Tool
             // 
             // label6
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(249, 436);
+            this.label6.Location = new System.Drawing.Point(234, 219);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(69, 13);
             this.label6.TabIndex = 31;
@@ -539,10 +527,9 @@ namespace CalcCorrectGraph_Calculation_Tool
             // 
             // OutputTextBox
             // 
-            this.OutputTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.OutputTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.OutputTextBox.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.OutputTextBox.Location = new System.Drawing.Point(226, 452);
+            this.OutputTextBox.Location = new System.Drawing.Point(222, 235);
             this.OutputTextBox.Name = "OutputTextBox";
             this.OutputTextBox.ReadOnly = true;
             this.OutputTextBox.Size = new System.Drawing.Size(92, 20);
@@ -552,14 +539,13 @@ namespace CalcCorrectGraph_Calculation_Tool
             // 
             // inputMultVal4
             // 
-            this.inputMultVal4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inputMultVal4.DecimalPlaces = 3;
             this.inputMultVal4.Increment = new decimal(new int[] {
             5,
             0,
             0,
             131072});
-            this.inputMultVal4.Location = new System.Drawing.Point(226, 210);
+            this.inputMultVal4.Location = new System.Drawing.Point(222, 180);
             this.inputMultVal4.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -581,9 +567,8 @@ namespace CalcCorrectGraph_Calculation_Tool
             // 
             // label8
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(223, 194);
+            this.label8.Location = new System.Drawing.Point(219, 164);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(102, 13);
             this.label8.TabIndex = 39;
@@ -591,9 +576,8 @@ namespace CalcCorrectGraph_Calculation_Tool
             // 
             // inputGrowVal4
             // 
-            this.inputGrowVal4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.inputGrowVal4.DecimalPlaces = 3;
-            this.inputGrowVal4.Location = new System.Drawing.Point(111, 210);
+            this.inputGrowVal4.Location = new System.Drawing.Point(109, 180);
             this.inputGrowVal4.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -615,9 +599,8 @@ namespace CalcCorrectGraph_Calculation_Tool
             // 
             // label9
             // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(108, 194);
+            this.label9.Location = new System.Drawing.Point(106, 164);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(101, 13);
             this.label9.TabIndex = 37;
@@ -626,7 +609,7 @@ namespace CalcCorrectGraph_Calculation_Tool
             // InputStageMaxVal4
             // 
             this.InputStageMaxVal4.DecimalPlaces = 3;
-            this.InputStageMaxVal4.Location = new System.Drawing.Point(12, 210);
+            this.InputStageMaxVal4.Location = new System.Drawing.Point(12, 180);
             this.InputStageMaxVal4.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -649,7 +632,7 @@ namespace CalcCorrectGraph_Calculation_Tool
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(9, 194);
+            this.label14.Location = new System.Drawing.Point(9, 164);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(76, 13);
             this.label14.TabIndex = 35;
@@ -657,7 +640,7 @@ namespace CalcCorrectGraph_Calculation_Tool
             // 
             // buttonDebugSet
             // 
-            this.buttonDebugSet.Location = new System.Drawing.Point(113, 361);
+            this.buttonDebugSet.Location = new System.Drawing.Point(115, 290);
             this.buttonDebugSet.Name = "buttonDebugSet";
             this.buttonDebugSet.Size = new System.Drawing.Size(96, 23);
             this.buttonDebugSet.TabIndex = 45;
@@ -666,11 +649,231 @@ namespace CalcCorrectGraph_Calculation_Tool
             this.buttonDebugSet.Visible = false;
             this.buttonDebugSet.Click += new System.EventHandler(this.ButtonDebugSet_Click);
             // 
+            // initCost
+            // 
+            this.initCost.DecimalPlaces = 3;
+            this.initCost.Location = new System.Drawing.Point(28, 51);
+            this.initCost.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.initCost.Minimum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            -2147483648});
+            this.initCost.Name = "initCost";
+            this.initCost.Size = new System.Drawing.Size(74, 20);
+            this.initCost.TabIndex = 41;
+            this.initCost.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            // 
+            // initOffset
+            // 
+            this.initOffset.DecimalPlaces = 3;
+            this.initOffset.Location = new System.Drawing.Point(28, 105);
+            this.initOffset.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.initOffset.Minimum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            -2147483648});
+            this.initOffset.Name = "initOffset";
+            this.initOffset.Size = new System.Drawing.Size(74, 20);
+            this.initOffset.TabIndex = 42;
+            this.initOffset.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // increaseInterval
+            // 
+            this.increaseInterval.DecimalPlaces = 3;
+            this.increaseInterval.Location = new System.Drawing.Point(28, 212);
+            this.increaseInterval.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.increaseInterval.Minimum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            -2147483648});
+            this.increaseInterval.Name = "increaseInterval";
+            this.increaseInterval.Size = new System.Drawing.Size(74, 20);
+            this.increaseInterval.TabIndex = 44;
+            this.increaseInterval.Value = new decimal(new int[] {
+            92,
+            0,
+            0,
+            0});
+            // 
+            // costIncrease
+            // 
+            this.costIncrease.DecimalPlaces = 3;
+            this.costIncrease.Location = new System.Drawing.Point(28, 157);
+            this.costIncrease.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.costIncrease.Minimum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            -2147483648});
+            this.costIncrease.Name = "costIncrease";
+            this.costIncrease.Size = new System.Drawing.Size(74, 20);
+            this.costIncrease.TabIndex = 43;
+            this.costIncrease.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            131072});
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(22, 35);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(102, 13);
+            this.label7.TabIndex = 46;
+            this.label7.Text = "Init_Inclination_Soul";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(22, 89);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(92, 13);
+            this.label15.TabIndex = 47;
+            this.label15.Text = "Adjustment_Value";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(22, 141);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(127, 13);
+            this.label16.TabIndex = 48;
+            this.label16.Text = "Boundry_Inclination_Soul";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(22, 196);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(79, 13);
+            this.label17.TabIndex = 49;
+            this.label17.Text = "Boundry_Value";
+            // 
+            // levelCostTextbox
+            // 
+            this.levelCostTextbox.BackColor = System.Drawing.SystemColors.Info;
+            this.levelCostTextbox.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.levelCostTextbox.Location = new System.Drawing.Point(222, 235);
+            this.levelCostTextbox.Name = "levelCostTextbox";
+            this.levelCostTextbox.ReadOnly = true;
+            this.levelCostTextbox.Size = new System.Drawing.Size(92, 20);
+            this.levelCostTextbox.TabIndex = 50;
+            this.levelCostTextbox.TabStop = false;
+            this.levelCostTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(224, 219);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(90, 13);
+            this.label18.TabIndex = 51;
+            this.label18.Text = "Output (soul cost)";
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(0, 1);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(332, 287);
+            this.tabControl1.TabIndex = 52;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.InputStageMaxVal0);
+            this.tabPage1.Controls.Add(this.Label1);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.OutputTextBox);
+            this.tabPage1.Controls.Add(this.label6);
+            this.tabPage1.Controls.Add(this.InputStageMaxVal1);
+            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.InputStageMaxVal2);
+            this.tabPage1.Controls.Add(this.label5);
+            this.tabPage1.Controls.Add(this.InputStageMaxVal3);
+            this.tabPage1.Controls.Add(this.StageMaxGrowVal0);
+            this.tabPage1.Controls.Add(this.inputGrowVal0);
+            this.tabPage1.Controls.Add(this.StageMaxGrowVal1);
+            this.tabPage1.Controls.Add(this.inputGrowVal1);
+            this.tabPage1.Controls.Add(this.StageMaxGrowVal2);
+            this.tabPage1.Controls.Add(this.inputMultVal4);
+            this.tabPage1.Controls.Add(this.inputGrowVal2);
+            this.tabPage1.Controls.Add(this.label8);
+            this.tabPage1.Controls.Add(this.StageMaxGrowVal3);
+            this.tabPage1.Controls.Add(this.inputGrowVal4);
+            this.tabPage1.Controls.Add(this.inputGrowVal3);
+            this.tabPage1.Controls.Add(this.label9);
+            this.tabPage1.Controls.Add(this.label13);
+            this.tabPage1.Controls.Add(this.InputStageMaxVal4);
+            this.tabPage1.Controls.Add(this.inputMultVal0);
+            this.tabPage1.Controls.Add(this.label14);
+            this.tabPage1.Controls.Add(this.label12);
+            this.tabPage1.Controls.Add(this.inputMultVal1);
+            this.tabPage1.Controls.Add(this.label11);
+            this.tabPage1.Controls.Add(this.inputMultVal3);
+            this.tabPage1.Controls.Add(this.inputMultVal2);
+            this.tabPage1.Controls.Add(this.label10);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(324, 261);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Stage Calcs";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.label7);
+            this.tabPage2.Controls.Add(this.label18);
+            this.tabPage2.Controls.Add(this.initCost);
+            this.tabPage2.Controls.Add(this.levelCostTextbox);
+            this.tabPage2.Controls.Add(this.initOffset);
+            this.tabPage2.Controls.Add(this.label17);
+            this.tabPage2.Controls.Add(this.increaseInterval);
+            this.tabPage2.Controls.Add(this.label16);
+            this.tabPage2.Controls.Add(this.costIncrease);
+            this.tabPage2.Controls.Add(this.label15);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(324, 261);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Level up cost";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
             // InputValButton
             // 
-            this.InputValButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.InputValButton.DecimalPlaces = 3;
-            this.InputValButton.Location = new System.Drawing.Point(12, 453);
+            this.InputValButton.Location = new System.Drawing.Point(12, 323);
             this.InputValButton.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -690,207 +893,15 @@ namespace CalcCorrectGraph_Calculation_Tool
             0,
             0});
             // 
-            // initCost
-            // 
-            this.initCost.DecimalPlaces = 3;
-            this.initCost.Location = new System.Drawing.Point(12, 269);
-            this.initCost.Maximum = new decimal(new int[] {
-            99999,
-            0,
-            0,
-            0});
-            this.initCost.Minimum = new decimal(new int[] {
-            99999,
-            0,
-            0,
-            -2147483648});
-            this.initCost.Name = "initCost";
-            this.initCost.Size = new System.Drawing.Size(65, 20);
-            this.initCost.TabIndex = 41;
-            this.initCost.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            // 
-            // initOffset
-            // 
-            this.initOffset.DecimalPlaces = 3;
-            this.initOffset.Location = new System.Drawing.Point(12, 325);
-            this.initOffset.Maximum = new decimal(new int[] {
-            99999,
-            0,
-            0,
-            0});
-            this.initOffset.Minimum = new decimal(new int[] {
-            99999,
-            0,
-            0,
-            -2147483648});
-            this.initOffset.Name = "initOffset";
-            this.initOffset.Size = new System.Drawing.Size(65, 20);
-            this.initOffset.TabIndex = 42;
-            this.initOffset.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // increaseInterval
-            // 
-            this.increaseInterval.DecimalPlaces = 3;
-            this.increaseInterval.Location = new System.Drawing.Point(253, 325);
-            this.increaseInterval.Maximum = new decimal(new int[] {
-            99999,
-            0,
-            0,
-            0});
-            this.increaseInterval.Minimum = new decimal(new int[] {
-            99999,
-            0,
-            0,
-            -2147483648});
-            this.increaseInterval.Name = "increaseInterval";
-            this.increaseInterval.Size = new System.Drawing.Size(65, 20);
-            this.increaseInterval.TabIndex = 44;
-            this.increaseInterval.Value = new decimal(new int[] {
-            92,
-            0,
-            0,
-            0});
-            // 
-            // costIncrease
-            // 
-            this.costIncrease.DecimalPlaces = 3;
-            this.costIncrease.Location = new System.Drawing.Point(253, 269);
-            this.costIncrease.Maximum = new decimal(new int[] {
-            99999,
-            0,
-            0,
-            0});
-            this.costIncrease.Minimum = new decimal(new int[] {
-            99999,
-            0,
-            0,
-            -2147483648});
-            this.costIncrease.Name = "costIncrease";
-            this.costIncrease.Size = new System.Drawing.Size(65, 20);
-            this.costIncrease.TabIndex = 43;
-            this.costIncrease.Value = new decimal(new int[] {
-            2,
-            0,
-            0,
-            131072});
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 253);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(98, 13);
-            this.label7.TabIndex = 46;
-            this.label7.Text = "init_inclination_soul";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(12, 309);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(90, 13);
-            this.label15.TabIndex = 47;
-            this.label15.Text = "adjustment_value";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(195, 253);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(123, 13);
-            this.label16.TabIndex = 48;
-            this.label16.Text = "boundry_inclination_soul";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(241, 309);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(77, 13);
-            this.label17.TabIndex = 49;
-            this.label17.Text = "boundry_value";
-            // 
-            // levelCostTextbox
-            // 
-            this.levelCostTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.levelCostTextbox.BackColor = System.Drawing.SystemColors.Info;
-            this.levelCostTextbox.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.levelCostTextbox.Location = new System.Drawing.Point(198, 413);
-            this.levelCostTextbox.Name = "levelCostTextbox";
-            this.levelCostTextbox.ReadOnly = true;
-            this.levelCostTextbox.Size = new System.Drawing.Size(120, 20);
-            this.levelCostTextbox.TabIndex = 50;
-            this.levelCostTextbox.TabStop = false;
-            this.levelCostTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label18
-            // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(245, 397);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(73, 13);
-            this.label18.TabIndex = 51;
-            this.label18.Text = "Cost To Level";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(330, 485);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.levelCostTextbox);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.costIncrease);
-            this.Controls.Add(this.increaseInterval);
-            this.Controls.Add(this.initOffset);
-            this.Controls.Add(this.initCost);
+            this.ClientSize = new System.Drawing.Size(330, 355);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.InputValButton);
             this.Controls.Add(this.buttonDebugSet);
-            this.Controls.Add(this.inputMultVal4);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.inputGrowVal4);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.InputStageMaxVal4);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.OutputTextBox);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.inputMultVal3);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.inputMultVal2);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.inputMultVal1);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.inputMultVal0);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.inputGrowVal3);
-            this.Controls.Add(this.StageMaxGrowVal3);
-            this.Controls.Add(this.inputGrowVal2);
-            this.Controls.Add(this.StageMaxGrowVal2);
-            this.Controls.Add(this.inputGrowVal1);
-            this.Controls.Add(this.StageMaxGrowVal1);
-            this.Controls.Add(this.inputGrowVal0);
-            this.Controls.Add(this.StageMaxGrowVal0);
-            this.Controls.Add(this.InputStageMaxVal3);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.InputStageMaxVal2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.InputStageMaxVal1);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.InputStageMaxVal0);
-            this.Controls.Add(this.Label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "CalcCorrectGraph Calculator";
@@ -910,11 +921,16 @@ namespace CalcCorrectGraph_Calculation_Tool
             ((System.ComponentModel.ISupportInitialize)(this.inputMultVal4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputGrowVal4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InputStageMaxVal4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.InputValButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.initCost)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.initOffset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.increaseInterval)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.costIncrease)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.InputValButton)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -967,6 +983,9 @@ namespace CalcCorrectGraph_Calculation_Tool
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox levelCostTextbox;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
     }
 }
 
