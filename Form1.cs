@@ -34,6 +34,10 @@ namespace CalcCorrectGraph_Calculation_Tool
             inputMultVal2.ValueChanged += Calculate;
             inputMultVal3.ValueChanged += Calculate;
             inputMultVal4.ValueChanged += Calculate;
+            initCost.ValueChanged += Calculate;
+            initOffset.ValueChanged += Calculate;
+            costIncrease.ValueChanged += Calculate;
+            increaseInterval.ValueChanged += Calculate;
             
             //highlight entire input if tabbed into
             InputValButton.GotFocus += (o, e) => InputValButton.Select(0, InputValButton.Text.Length);
@@ -52,6 +56,10 @@ namespace CalcCorrectGraph_Calculation_Tool
             inputMultVal2.GotFocus += (o, e) => inputMultVal2.Select(0, inputMultVal2.Text.Length);
             inputMultVal3.GotFocus += (o, e) => inputMultVal3.Select(0, inputMultVal3.Text.Length);
             inputMultVal4.GotFocus += (o, e) => inputMultVal4.Select(0, inputMultVal4.Text.Length);
+            initCost.GotFocus += (o, e) => initCost.Select(0, initCost.Text.Length);
+            initOffset.GotFocus += (o, e) => initOffset.Select(0, initOffset.Text.Length);
+            costIncrease.GotFocus += (o, e) => costIncrease.Select(0, costIncrease.Text.Length);
+            increaseInterval.GotFocus += (o, e) => increaseInterval.Select(0, increaseInterval.Text.Length);
 
         }
 
@@ -84,6 +92,25 @@ namespace CalcCorrectGraph_Calculation_Tool
             return;
         }
 
+        public void CalculateLevelCost(double inpVal, double iC, double iO, double cI, double iI)
+        {
+
+            double outputCost;
+            double funcMod = ((inpVal + 81) - iI) * cI;
+            if (funcMod < 0)
+            {
+                funcMod = 0;
+            }
+
+            outputCost = ((funcMod + iC) * (Math.Pow((inpVal + 81), 2))) + iO;
+
+            outputCost = Math.Floor(outputCost);
+
+            levelCostTextbox.Text = outputCost.ToString();
+
+        }
+
+
         private void Calculate(object sender, EventArgs e)
         {
             double stageVal0 = Convert.ToDouble(InputStageMaxVal0.Value);
@@ -102,6 +129,11 @@ namespace CalcCorrectGraph_Calculation_Tool
             double multVal3 = Convert.ToDouble(inputMultVal3.Value);
             double multVal4 = Convert.ToDouble(inputMultVal4.Value);
             double inputVal = Convert.ToDouble(InputValButton.Value);
+            double initialCost = Convert.ToDouble(initCost.Value);
+            double initialOffset = Convert.ToDouble(initOffset.Value);
+            double increaseCost = Convert.ToDouble(costIncrease.Value);
+            double intervalIncrease = Convert.ToDouble(increaseInterval.Value);
+
 
             //error check. if stage max and min are the same then it will divide by zero
             if (stageVal0 >= stageVal1 || stageVal1 >= stageVal2 || stageVal2 >= stageVal3 || stageVal3 >= stageVal4){
@@ -132,6 +164,15 @@ namespace CalcCorrectGraph_Calculation_Tool
                 //error: input value greater than stage 4
                 OutputTextBox.Text = "ERR: >STAGE4";
             }
+            if (inputVal > 0 && inputVal % 1 == 0)
+            {
+                CalculateLevelCost(inputVal, initialCost, initialOffset, increaseCost, intervalIncrease);
+            }
+            else
+            {
+                levelCostTextbox.Text = "ERR: <0; =/= integer";
+            }
+
         }
 
         private void ButtonDebugSet_Click(object sender, EventArgs e)
